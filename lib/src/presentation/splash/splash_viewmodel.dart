@@ -7,7 +7,7 @@ class SplashViewModel extends BaseViewModel {
 
   init() async {
     EasyLoading.show(status: 'loading...');
-    await exampleRepository.getMoreApps();
+    // await exampleRepository.getMoreApps();
     EasyLoading.dismiss();
     Navigator.pushNamed(context, Routers.navigation);
   }

@@ -29,9 +29,9 @@ abstract class BaseViewModel extends ChangeNotifier {
 
   GlobalKey<ScaffoldState> get scaffoldKey => _scaffoldKey;
 
-  final AuthRepository authRepository = AuthRepository();
-  final FirebaseRepository firebaseRepository = FirebaseRepository();
-  final ExampleRepository exampleRepository = ExampleRepository();
+  // final AuthRepository authRepository = AuthRepository();
+  // final FirebaseRepository firebaseRepository = FirebaseRepository();
+  // final ExampleRepository exampleRepository = ExampleRepository();
 
   @override
   void dispose() async {

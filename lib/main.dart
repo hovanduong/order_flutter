@@ -1,9 +1,10 @@
-import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:firebase_analytics/observer.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_analytics/firebase_analytics.dart';
+// import 'package:firebase_analytics/observer.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_app/src/presentation/home/home_screen.dart';
 import 'package:flutter_app/src/utils/utils.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
@@ -15,9 +16,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIOverlays([]);
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  await Firebase.initializeApp();
-  await AppPref.initListener();
-  notificationInitialed();
+  // await Firebase.initializeApp();
+  // await AppPref.initListener();
+  // notificationInitialed();
   runApp(RestartWidget(child: App()));
 }
 
@@ -30,9 +31,9 @@ class App extends StatelessWidget {
 }
 
 class MyApp extends StatefulWidget {
-  static FirebaseAnalytics analytics = FirebaseAnalytics();
-  static FirebaseAnalyticsObserver observer =
-  FirebaseAnalyticsObserver(analytics: analytics);
+  // static FirebaseAnalytics analytics = FirebaseAnalytics();
+  // static FirebaseAnalyticsObserver observer =
+  // FirebaseAnalyticsObserver(analytics: analytics);
 
   @override
   _MyAppState createState() => _MyAppState();
@@ -64,10 +65,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       debugShowCheckedModeBanner: false,
       title: AppValues.APP_NAME,
       theme: ThemeSwitcher.of(context).themeData,
-      navigatorObservers: <NavigatorObserver>[MyApp.observer],
+      // navigatorObservers: <NavigatorObserver>[MyApp.observer],
       locale: Locale('vi', 'VN'),
       translationsKeys: AppTranslation.translations,
-      home: SplashScreen(),
+      home: HomeScreen(),
       onGenerateRoute: Routers.generateRoute,
       builder: EasyLoading.init(),
     );

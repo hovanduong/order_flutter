@@ -1,10 +1,10 @@
-class AuthRepository {
-  AuthRepository._();
+// class AuthRepository {
+//   AuthRepository._();
 
-  static AuthRepository _instance;
+//   static AuthRepository _instance;
 
-  factory AuthRepository() {
-    if (_instance == null) _instance = AuthRepository._();
-    return _instance;
-  }
-}
+//   factory AuthRepository() {
+//     if (_instance == null) _instance = AuthRepository._();
+//     return _instance;
+//   }
+// }
